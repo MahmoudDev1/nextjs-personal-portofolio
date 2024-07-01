@@ -10,14 +10,14 @@ interface Props {
 
 export default function ProjectBox(props: Props) {
   return (
-    <div className="group border border-white/[0.2] rounded-xl overflow-hidden p-5 w-full sm:w-[49%] flex flex-col">
-      <div className="relative w-full rounded-xl overflow-hidden bg-[url('/project-bg.png')] bg-cover h-[320px] bg-[#13162d]">
+    <div className="group border border-white/[0.2] rounded-xl overflow-hidden p-5 w-full md:w-[49%] flex flex-col">
+      <div className="relative w-full rounded-xl overflow-hidden bg-[url('/project-bg.png')] bg-cover h-[260px] sm:h-[320px] bg-[#13162d]">
         <Image
           src={`/projects/${props.image}`}
           width={450}
           height={300}
           alt="Project Image"
-          className="rounded-xl mx-auto rotate-3 top-[70px] relative transition group-hover:rotate-0 w-[450px] h-[300px] object-cover"
+          className="rounded-xl mx-auto sm:rotate-3 sm:top-[70px] relative transition group-hover:rotate-0 w-[450px] h-[300px] object-cover"
         />
       </div>
       <div className="mt-5 content flex flex-col justify-between flex-1">

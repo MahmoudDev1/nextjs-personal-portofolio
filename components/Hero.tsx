@@ -31,13 +31,13 @@ export default function Hero() {
         <div className="absolute pointer-events-none inset-0 flex items-center justify-center bg-black-100 [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
       </div>
       <Spotlight className="z-10 top-0 lg:h-[90vh]" fill="blue" />
-      <Spotlight className="z-10 h-[80vh] w-[50vw] top-10 left-full" fill="purple" />
+      <Spotlight className="hidden md:block z-10 h-[80vh] w-[50vw] top-10 left-full" fill="purple" />
       <div className="relative content z-20 mt-56 text-center mx-auto md:max-w-2xl lg:max-w-4xl text-white">
-        <div className="uppercase tracking-widest text-xs text-center text-blue-100">
+        <div className="uppercase tracking-widest text-[10px] md:text-xs text-center text-blue-100">
           I Create Websites That Are{" "}
           <FlipWords
             words={["Responsive", "Beautiful", "Intuitive", "Dynamic"]}
-            duration={3000}
+            duration={1500}
             className="text-blue-100"
           />
         </div>

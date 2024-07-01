@@ -34,7 +34,7 @@ export const ScrollReveal = ({ contentClassName }: { contentClassName?: string }
     {
       title: "Design and Development",
       description:
-        "During this phase, we create wireframes and prototypes, followed by the actual development of the website. We maintain open communication throughout, providing regular updates and seeking your feedback to ensure the project is on track.",
+        "During this phase, we create wireframes and prototypes, then develop the website. Throughout, we maintain open communication, provide regular updates, and seek your feedback to keep the project on track.",
       content: (
         <div className="h-full w-full p-3">
           <Image src={step2Image} className="h-full w-full" alt="linear board demo" />
