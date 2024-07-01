@@ -29,6 +29,12 @@ export const projects: Project[] = [
     description: 'Blogs app where users can add, delete, edit and search blogs + add blogs with tags for searching, an admin page to control users and blogs and everything on the website.',
   },
   {
+    title: 'Modabook App',
+    image: '13.png',
+    description: 'This website is like facebook, made with NextJS allowing registered users to add, save, like posts and search users and alot more features.',
+    link: 'https://moda-book.vercel.app/',
+  },
+  {
     title: 'Design Template',
     image: '3.jpg',
     description: 'This is a Big Design i Made With HTML And CSS And Some Javascript That has Cool Animations and Styles.',
