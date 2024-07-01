@@ -38,9 +38,11 @@ export default function ContactModal() {
     });
   }, []);
 
-  if (state?.success) {
-    form.current?.reset();
-  }
+  useEffect(() => {
+    if (state?.success) {
+      form.current?.reset();
+    }
+  }, [state?.success]);
 
   function closeModal() {
     router.push("/", { scroll: false });
