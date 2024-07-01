@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  scroll-behavior: smooth;
+  background-color: #000319;
+  overflow-x: hidden;
+  color: #fff;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  /* display: none; */
+}
+
+.scrollbar-hide {
+  /* -ms-overflow-style: none;
+  scrollbar-width: none; */
+  overflow-y: hidden;
+}
