@@ -9,10 +9,10 @@ export default function Footer() {
       <div className="h-full w-full -z-10 bg-black-100 bg-grid-lg-white/[0.04] absolute top-0 left-0 flex items-center justify-center">
         <div className="z-10 absolute pointer-events-none inset-0 flex items-center justify-center bg-black-100 [mask-image:radial-gradient(ellipse_at_center,transparent_1%,black)]"></div>
       </div>
-      <h2 className="text-center font-bold text-xl md:text-4xl mb-5">
+      <h2 className="text-center font-bold text-2xl md:text-4xl mb-5">
         Ready to bring <span className="text-purple">your vision</span> to life?
       </h2>
-      <p className="text-gray-400 ">Reach me out and let&apos;s turn all your ideas into reality together.</p>
+      <p className="text-gray-400 text-xs sm:text-sm md:text-base ">Reach me out and let&apos;s turn all your ideas into reality together.</p>
       <Button classes="mt-10" href="?openModal=true">
         Get in touch <SiMinutemailer className="ms-2" fontSize={17} />
       </Button>

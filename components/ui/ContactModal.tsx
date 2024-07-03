@@ -104,7 +104,7 @@ export default function ContactModal() {
                 ></textarea>
               </div>
 
-              <div className="flex items-end justify-between">
+              <div className="flex items-end justify-between gap-5 flex-wrap">
                 <FormButton />
                 {state?.success && (
                   <p className="text-green-600 pb-0 flex gap-2 items-center font-bold">

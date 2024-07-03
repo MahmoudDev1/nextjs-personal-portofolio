@@ -151,7 +151,7 @@ export const ScrollReveal = ({ contentClassName }: { contentClassName?: string }
                 animate={{
                   opacity: activeCard === index ? 1 : 0.3,
                 }}
-                className="text-sm md:text-base text-gray-300 max-w-sm mt-5 h-[135px]"
+                className="text-xs sm:text-sm md:text-base text-gray-300 max-w-sm mt-5 h-[135px]"
               >
                 {item.description}
               </motion.p>
