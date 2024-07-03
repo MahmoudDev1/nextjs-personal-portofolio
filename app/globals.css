@@ -16,12 +16,13 @@
 }
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
   scroll-behavior: smooth;
   background-color: #000319;
-  overflow-x: clip;
+  overflow-x: hidden;
   color: #fff;
 }
 
