@@ -30,7 +30,7 @@ export default function Hero() {
       <div className="h-screen w-full -z-10 bg-black-100 bg-grid-white/[0.03] absolute top-0 left-0 flex items-center justify-center">
         <div className="absolute pointer-events-none inset-0 flex items-center justify-center bg-black-100 [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
       </div>
-      <Spotlight className="z-10 top-0 lg:h-[90vh]" fill="blue" />
+      <Spotlight className="hidden md:block z-10 top-0 lg:h-[90vh]" fill="blue" />
       <Spotlight className="hidden md:block z-10 h-[80vh] w-[50vw] top-10 left-full" fill="purple" />
       <div className="relative content z-20 mt-56 text-center mx-auto md:max-w-2xl lg:max-w-4xl text-white">
         <div className="uppercase tracking-widest text-[10px] md:text-xs text-center text-blue-100">
