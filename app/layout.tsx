@@ -24,7 +24,7 @@ export default function RootLayout({
           <ContactModal />
         </Suspense>
         <div className="mx-auto max-w-7xl px-5 sm:px-10">{children}</div>
-        <Analytics />
+        {/* <Analytics /> */}
       </body>
     </html>
   );

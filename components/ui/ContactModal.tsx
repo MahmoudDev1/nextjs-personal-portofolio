@@ -39,6 +39,23 @@ export default function ContactModal() {
   }, []);
 
   useEffect(() => {
+    if (modal) {
+      document.body.style.top = -document.documentElement.scrollTop + "px";
+      document.body.classList.add("hide-scrollbar");
+    } else {
+      const scrollY = document.body.style.top;
+      if (scrollY) {
+        document.body.classList.remove("hide-scrollbar");
+        document.body.style.top = "";
+        window.scrollTo({
+          behavior: "instant",
+          top: parseInt(scrollY || "0") * -1
+        });
+      }
+    }
+  }, [modal]);
+
+  useEffect(() => {
     if (state?.success) {
       form.current?.reset();
     }
@@ -66,9 +83,7 @@ export default function ContactModal() {
             transition={{ bounce: false }}
             className="fixed top-[50%] left-[50%] z-50 bg-black-100 w-full sm:w-[500px] p-5 rounded-md border-2 border-white/[0.1]"
           >
-            {state?.success && (
-              <ReactConfetti recycle={false} width={500} height={416} />
-            )}
+            {state?.success && <ReactConfetti recycle={false} width={500} height={416} />}
             <h1 className="font-bold text-lg md:text-xl tracking-wide">Let&apos;s Get in Touch!</h1>
             <form className="mt-5" action={formAction} ref={form}>
               <div className="relative mb-4">
