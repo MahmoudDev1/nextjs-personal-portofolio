@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import ContactModal from "@/components/ui/ContactModal";
 import { Suspense } from "react";
+import { Analytics } from "@vercel/analytics/react"
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -23,6 +24,7 @@ export default function RootLayout({
           <ContactModal />
         </Suspense>
         <div className="mx-auto max-w-7xl px-5 sm:px-10">{children}</div>
+        <Analytics />
       </body>
     </html>
   );
