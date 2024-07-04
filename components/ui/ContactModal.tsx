@@ -108,7 +108,7 @@ export default function ContactModal() {
                   dir="ltr"
                   type="email"
                   placeholder={t("input2")}
-                  className="text-right w-full py-2 pe-8 ps-3 rounded-md bg-transparent border border-white/[0.2] focus:outline-none placeholder:text-gray-400"
+                  className="rtl:text-right w-full py-2 rtl:pe-8 rtl:ps-3 ps-8 pe-3 rounded-md bg-transparent border border-white/[0.2] focus:outline-none placeholder:text-gray-400"
                   name="email"
                   required
                 />
