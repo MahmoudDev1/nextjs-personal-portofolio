@@ -9,13 +9,18 @@ import step2Image from "@/public/step2.png";
 import step3Image from "@/public/step3.png";
 import { FaAngleDown } from "react-icons/fa";
 import { FaAngleUp } from "react-icons/fa6";
+import { useLocale } from "next-intl";
 
 export const ScrollReveal = ({ contentClassName }: { contentClassName?: string }) => {
+  const locale = useLocale();
+
   const content = [
     {
-      title: "Initial Consultation",
+      title: locale === "ar" ? "الاستشارة الأولية" : "Initial Consultation",
       description:
-        "We start with a comprehensive discussion to understand your goals, requirements, and vision for the project. This step ensures that we are aligned and can create a roadmap for success.",
+        locale === "ar"
+          ? "نبدأ بمناقشة شاملة لفهم أهدافك ومتطلباتك ورؤيتك للمشروع. تضمن هذه الخطوة أننا متفقون ويمكننا إنشاء خريطة طريق للنجاح."
+          : "We start with a comprehensive discussion to understand your goals, requirements, and vision for the project. This step ensures that we are aligned and can create a roadmap for success.",
       content: (
         <div className="h-full w-full p-3">
           <Image src={step1Image} className="h-full w-full" alt="linear board demo" />
@@ -27,14 +32,16 @@ export const ScrollReveal = ({ contentClassName }: { contentClassName?: string }
           className="mt-5 flex gap-2 items-center border-2 font-bold p-3 rounded-lg border-purple text-purple"
         >
           <FaAngleDown fontSize={19} />
-          Next Step
+          {locale === "ar" ? "الخطوة التالية" : "Next Step"}
         </button>
       ),
     },
     {
-      title: "Design and Development",
+      title: locale === "ar" ? "التصميم والتطوير" : "Design and Development",
       description:
-        "During this phase, we create wireframes and prototypes, then develop the website. Throughout, we maintain open communication, provide regular updates, and seek your feedback to keep the project on track.",
+        locale === "ar"
+          ? "خلال هذه المرحلة، نقوم بإنشاء نماذج أولية، ثم نقوم بتطوير الموقع الإلكتروني. طوال هذه الفترة، نحافظ على التواصل المفتوح، ونقدم تحديثات منتظمة، ونبحث عن ملاحظاتك للحفاظ على مسار المشروع."
+          : "During this phase, we create wireframes and prototypes, then develop the website. Throughout, we maintain open communication, provide regular updates, and seek your feedback to keep the project on track.",
       content: (
         <div className="h-full w-full p-3">
           <Image src={step2Image} className="h-full w-full" alt="linear board demo" />
@@ -46,14 +53,16 @@ export const ScrollReveal = ({ contentClassName }: { contentClassName?: string }
           className="mt-5 flex gap-2 items-center border-2 font-bold p-3 rounded-lg border-purple text-purple"
         >
           <FaAngleDown fontSize={19} />
-          Next Step
+          {locale === "ar" ? "الخطوة التالية" : "Next Step"}
         </button>
       ),
     },
     {
-      title: "Review and Launch",
+      title: locale === "ar" ? "المراجعة والإطلاق" : "Review and Launch",
       description:
-        "In the final step, we conduct thorough testing and make any necessary adjustments based on your feedback. Once everything is approved, we launch your website, ensuring a smooth and successful deployment.",
+        locale === "ar"
+          ? "في الخطوة النهائية، نقوم بإجراء اختبار شامل وإجراء التعديلات اللازمة بناءً على ملاحظاتك. بمجرد الموافقة على كل شيء، نطلق موقعك على الويب، مما يضمن نجاح المشروع."
+          : "In the final step, we conduct thorough testing and make any necessary adjustments based on your feedback. Once everything is approved, we launch your website, ensuring a smooth and successful deployment.",
       content: (
         <div className="h-full w-full p-3">
           <Image src={step3Image} className="h-full w-full" alt="linear board demo" />
@@ -65,7 +74,7 @@ export const ScrollReveal = ({ contentClassName }: { contentClassName?: string }
           className="mt-5 flex gap-2 items-center border-2 font-bold p-3 rounded-lg border-purple text-purple"
         >
           <FaAngleUp fontSize={19} />
-          Go Back
+          {locale === "ar" ? "العودة" : "Go Back"}
         </button>
       ),
     },

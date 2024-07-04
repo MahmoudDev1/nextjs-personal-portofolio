@@ -63,7 +63,7 @@ export const MovingTechsBoxes = ({
     }
   };
   return (
-    <div ref={containerRef} className={cn("scroller relative z-20 overflow-hidden [mask-image:linear-gradient(to_right,transparent,white_20%,white_90%,transparent)]", className)}>
+    <div ref={containerRef} dir="ltr" className={cn("scroller relative z-20 overflow-hidden [mask-image:linear-gradient(to_right,transparent,white_20%,white_90%,transparent)]", className)}>
       <ul
         ref={scrollerRef}
         className={cn(

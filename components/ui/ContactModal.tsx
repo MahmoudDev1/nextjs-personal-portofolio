@@ -12,18 +12,22 @@ import { sendMail } from "@/utils/mail";
 import { useFormState, useFormStatus } from "react-dom";
 import Spinner from "./Spinner";
 import ReactConfetti from "react-confetti";
+import { useLocale, useTranslations } from "next-intl";
 
 function FormButton() {
+  const t = useTranslations("Modal");
   const { pending } = useFormStatus();
   return (
     <Button classes="w-fit" disabled={pending}>
       {pending ? <Spinner /> : <RiSendPlaneFill fontSize={18} className="me-2" />}
-      Send Message
+      {t("button")}
     </Button>
   );
 }
 
 export default function ContactModal() {
+  const locale = useLocale();
+  const t = useTranslations("Modal");
   const searchParams = useSearchParams();
   const modal = searchParams.get("openModal");
   const router = useRouter();
@@ -49,7 +53,7 @@ export default function ContactModal() {
         document.body.style.top = "";
         window.scrollTo({
           behavior: "instant",
-          top: parseInt(scrollY || "0") * -1
+          top: parseInt(scrollY || "0") * -1,
         });
       }
     }
@@ -77,6 +81,7 @@ export default function ContactModal() {
             onClick={closeModal}
           ></motion.div>
           <motion.div
+            dir={locale == "en" ? "ltr" : "rtl"}
             initial={{ opacity: 0, y: "-70%", x: "-50%" }}
             animate={{ opacity: 1, y: "-50%", x: "-50%" }}
             exit={{ opacity: 0, y: "-70%", x: "-50%" }}
@@ -84,13 +89,13 @@ export default function ContactModal() {
             className="fixed top-[50%] left-[50%] z-50 bg-black-100 w-full sm:w-[500px] p-5 rounded-md border-2 border-white/[0.1]"
           >
             {state?.success && <ReactConfetti recycle={false} width={500} height={416} />}
-            <h1 className="font-bold text-lg md:text-xl tracking-wide">Let&apos;s Get in Touch!</h1>
+            <h1 className="font-bold text-lg md:text-xl tracking-wide">{t("title")}</h1>
             <form className="mt-5" action={formAction} ref={form}>
               <div className="relative mb-4">
-                <FaUser className="text-gray-400 absolute top-[50%] translate-y-[-50%] left-2" />
+                <FaUser className="text-gray-400 absolute top-[50%] translate-y-[-50%] left-2 rtl:right-2 rtl:left-auto" />
                 <input
                   type="text"
-                  placeholder="Enter your name"
+                  placeholder={t("input1")}
                   className="w-full py-2 ps-8 pe-3 rounded-md bg-transparent border border-white/[0.2] focus:outline-none placeholder:text-gray-400"
                   name="name"
                   required
@@ -98,20 +103,21 @@ export default function ContactModal() {
                 />
               </div>
               <div className="relative mb-4">
-                <FaEnvelope className="text-gray-400 absolute top-[50%] translate-y-[-50%] left-2" />
+                <FaEnvelope className="text-gray-400 absolute top-[50%] translate-y-[-50%] left-2 rtl:right-2 rtl:left-auto" />
                 <input
+                  dir="ltr"
                   type="email"
-                  placeholder="Enter email address"
-                  className="w-full py-2 ps-8 pe-3 rounded-md bg-transparent border border-white/[0.2] focus:outline-none placeholder:text-gray-400"
+                  placeholder={t("input2")}
+                  className="text-right w-full py-2 pe-8 ps-3 rounded-md bg-transparent border border-white/[0.2] focus:outline-none placeholder:text-gray-400"
                   name="email"
                   required
                 />
               </div>
               <div className="relative mb-4">
-                <FaMessage className="text-gray-400 absolute top-4 left-2" />
+                <FaMessage className="text-gray-400 absolute top-3 left-2 rtl:right-2 rtl:left-auto" />
                 <textarea
                   rows={5}
-                  placeholder="Enter your message"
+                  placeholder={t("input3")}
                   className="w-full py-2 ps-8 pe-3 rounded-md bg-transparent border border-white/[0.2] focus:outline-none resize-none placeholder:text-gray-400"
                   name="message"
                   required
@@ -124,13 +130,13 @@ export default function ContactModal() {
                 {state?.success && (
                   <p className="text-green-600 pb-0 flex gap-2 items-center font-bold">
                     <FaCheck />
-                    Message successfully sent.
+                    {locale == "en" ? "Message successfully sent." : "تم إرسال الرسالة."}
                   </p>
                 )}
                 {state?.error && (
                   <p className="text-red-600 pb-0 flex gap-2 items-center font-bold">
                     <FaXmark />
-                    An error occured.
+                    {locale == "en" ? "An error occured." : "حدث خطأ."}
                   </p>
                 )}
               </div>

@@ -27,10 +27,9 @@ body {
 }
 @media (min-width: 1024px) {
   body.hide-scrollbar {
-    position: fixed; 
-    top: var(--st, 0);
+    position: fixed;
     inline-size: 100%;
-    overflow-y:scroll;
+    overflow-y: scroll;
   }
 }
 

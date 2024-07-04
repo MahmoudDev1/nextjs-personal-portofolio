@@ -2,8 +2,10 @@
 import { useEffect } from "react";
 import { motion, stagger, useAnimate } from "framer-motion";
 import { cn } from "@/utils/cn";
+import { useLocale } from "next-intl";
 
 export const TextGenerateEffect = ({ words, className }: { words: string; className?: string }) => {
+  const locale = useLocale()
   const [scope, animate] = useAnimate();
   let wordsArray = words.split(" ");
   useEffect(() => {
@@ -17,7 +19,7 @@ export const TextGenerateEffect = ({ words, className }: { words: string; classN
         delay: stagger(0.2),
       }
     );
-  }, [scope.current]);
+  }, [scope.current, locale]);
 
   const renderWords = () => {
     return (
