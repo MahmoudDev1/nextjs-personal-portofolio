@@ -42,7 +42,7 @@ export const projects: Project[] = [
     title: 'Modabook App',
     image: '13.png',
     description: 'This website is like facebook, made with NextJS allowing registered users to add, save, like posts and search users and alot more features.',
-    link: 'https://moda-book.vercel.app/',
+    link: 'https://modabook.vercel.app/',
     ar_title: 'موقع شبيه فيسبوك',
     ar_description: 'هذا الموقع مشابه لفيسبوك، تم بناؤه باستخدام NextJS مما يتيح للمستخدمين المسجلين إضافة، حفظ، إعجاب المنشورات والبحث عن المستخدمين والكثير من الميزات الأخرى.'
   },
