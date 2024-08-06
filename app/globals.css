@@ -36,3 +36,10 @@ body {
 .scrollbar-hide {
   overflow-y: hidden;
 }
+
+.backdrop-blur-sm {
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
