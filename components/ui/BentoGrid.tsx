@@ -17,6 +17,7 @@ import {
 } from "react-icons/ri";
 import { useState } from "react";
 import EmailCopy from "./EmailCopy";
+import { SiTypescript } from "react-icons/si";
 
 export const BentoGrid = ({ className, children }: { className?: string; children?: React.ReactNode }) => {
   return (
@@ -57,6 +58,10 @@ export const BentoGridItem = ({
     {
       name: "NPM",
       icon: <RiNpmjsLine color="#cb3837" />,
+    },
+    {
+      name: "TypeScript",
+      icon: <SiTypescript color="#3178c6" />,
     },
   ];
 
