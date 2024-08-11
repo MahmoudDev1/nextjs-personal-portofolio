@@ -5,27 +5,28 @@ import { Navbar } from "./ui/Navbar";
 import { Spotlight } from "./ui/SpotLight";
 import { TextGenerateEffect } from "./ui/TextGenerate";
 import { RiSendPlaneFill } from "react-icons/ri";
+import { FaWifi } from "react-icons/fa";
 
-export default function Hero() {
+export default function Hero(props: { offline?: boolean }) {
   const t = useTranslations("Landing");
-  const navbar = useTranslations("Navbar")
+  const navbar = useTranslations("Navbar");
   const locale = useLocale();
 
   const navbarItems = [
     {
-      name: navbar('nav1'),
+      name: navbar("nav1"),
       link: "#",
     },
     {
-      name: navbar('nav2'),
+      name: navbar("nav2"),
       link: "#about",
     },
     {
-      name: navbar('nav3'),
+      name: navbar("nav3"),
       link: "#projects",
     },
     {
-      name: navbar('nav4'),
+      name: navbar("nav4"),
       link: "#contact",
     },
   ];
@@ -63,12 +64,19 @@ export default function Hero() {
         )}
         <TextGenerateEffect
           words={t("info")}
-          className='mt-6 text-sm md:text-lg lg:text-xl tracking-widest rtl:tracking-normal'
+          className="mt-6 text-sm md:text-lg lg:text-xl tracking-widest rtl:tracking-normal"
         />
-        <Button classes="mt-10" href="#projects" anchor>
-          <span className="me-2">{t("button")}</span>
-          <RiSendPlaneFill fontSize={16} />
-        </Button>
+        {props.offline ? (
+          <p className="mt-52 w-fit mx-auto text-purple">
+            <FaWifi className="inline me-2" />
+            {t("offlineText")}
+          </p>
+        ) : (
+          <Button classes="mt-10" href="#projects" anchor>
+            <span className="me-2">{t("button")}</span>
+            <RiSendPlaneFill fontSize={16} />
+          </Button>
+        )}
       </div>
     </>
   );

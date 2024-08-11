@@ -8,7 +8,8 @@
   "Landing": {
     "title": "Transforming Concepts into Seamless User Experiences",
     "button": "Show my work",
-    "info": "Hello i'm Mahmoud, a Next.js Frontend Developer."
+    "info": "Hello i'm Mahmoud, a Next.js Frontend Developer.",
+    "offlineText": "Come Back Online to complete browsing."
   },
   "About": {
     "box1": "I prioritize collaboration and clear communication to build great web solutions.",
