@@ -65,8 +65,8 @@ export default function Hero() {
           words={t("info")}
           className="mt-6 text-sm md:text-lg lg:text-xl tracking-widest rtl:tracking-normal"
         />
-        <div className="mt-10 flex gap-2 justify-center">
-          <Button href="#projects" anchor>
+        <div className="mt-10 flex gap-2 justify-center flex-wrap">
+          <Button href="#projects" anchor classes="hidden sm:inline-flex">
             <div className="flex gap-2 items-center">
               <RiSendPlaneFill fontSize={16} />
               <span>{t("button")}</span>

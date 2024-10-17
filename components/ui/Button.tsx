@@ -16,7 +16,7 @@ export default function Button({ children, classes = "", href, background = "bg-
 
   const isLink = !!href;
   const commonClasses =
-    "relative inline-flex h-12 overflow-hidden rounded-md p-[1px] focus:outline-none w-52 disabled:opacity-55 disabled:cursor-default " + classes;
+    "relative inline-flex h-12 overflow-hidden rounded-md p-[1px] focus:outline-none w-44 sm:w-52 disabled:opacity-55 disabled:cursor-default " + classes;
 
   if (isLink && !anchor) {
     return (
