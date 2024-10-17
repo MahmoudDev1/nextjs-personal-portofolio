@@ -19,8 +19,8 @@ export default function ProjectBox(props: Props) {
       <div className="relative w-full rounded-xl overflow-hidden bg-[url('/project-bg.png')] bg-cover h-[260px] sm:h-[320px] bg-[#13162d]">
         <Image
           src={`/projects/${props.image}`}
-          width={450}
-          height={300}
+          width={500}
+          height={500}
           alt="Project Image"
           className="rounded-xl mx-auto sm:rotate-3 sm:top-[70px] relative transition group-hover:rotate-0 w-[450px] h-[300px] object-cover"
         />

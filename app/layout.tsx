@@ -1,11 +1,10 @@
 import type { Metadata } from "next";
 import { El_Messiri, Inter } from "next/font/google";
-import "./globals.css";
 import ContactModal from "@/components/ui/ContactModal";
-import { Suspense } from "react";
 import { Analytics } from "@vercel/analytics/react";
 import { NextIntlClientProvider } from "next-intl";
 import { getLocale, getMessages } from "next-intl/server";
+import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
 const el_messiri = El_Messiri({ subsets: ["arabic"] });
@@ -23,9 +22,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
     <html lang={locale}>
       <body className={`${locale == "en" ? inter.className : el_messiri.className} dark`}>
         <NextIntlClientProvider messages={messages}>
-          <Suspense>
-            <ContactModal />
-          </Suspense>
+          <ContactModal />
           <div className="mx-auto max-w-7xl px-5 sm:px-10" dir={locale == "en" ? "ltr" : "rtl"}>{children}</div>
         </NextIntlClientProvider>
         <Analytics />

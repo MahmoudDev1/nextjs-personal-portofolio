@@ -4,10 +4,9 @@ import { FlipWords } from "./ui/FlipWords";
 import { Navbar } from "./ui/Navbar";
 import { Spotlight } from "./ui/SpotLight";
 import { TextGenerateEffect } from "./ui/TextGenerate";
-import { RiSendPlaneFill } from "react-icons/ri";
-import { FaWifi } from "react-icons/fa";
+import { RiFileUserFill, RiSendPlaneFill } from "react-icons/ri";
 
-export default function Hero(props: { offline?: boolean }) {
+export default function Hero() {
   const t = useTranslations("Landing");
   const navbar = useTranslations("Navbar");
   const locale = useLocale();
@@ -66,17 +65,20 @@ export default function Hero(props: { offline?: boolean }) {
           words={t("info")}
           className="mt-6 text-sm md:text-lg lg:text-xl tracking-widest rtl:tracking-normal"
         />
-        {props.offline ? (
-          <p className="mt-52 w-fit mx-auto text-purple">
-            <FaWifi className="inline me-2" />
-            {t("offlineText")}
-          </p>
-        ) : (
-          <Button classes="mt-10" href="#projects" anchor>
-            <span className="me-2">{t("button")}</span>
-            <RiSendPlaneFill fontSize={16} />
+        <div className="mt-10 flex gap-2 justify-center">
+          <Button href="#projects" anchor>
+            <div className="flex gap-2 items-center">
+              <RiSendPlaneFill fontSize={16} />
+              <span>{t("button")}</span>
+            </div>
           </Button>
-        )}
+          <Button href="cv.pdf" download anchor>
+            <div className="flex gap-2 items-center">
+              <RiFileUserFill fontSize={16} />
+              <span>{t("button2")}</span>
+            </div>
+          </Button>
+        </div>
       </div>
     </>
   );

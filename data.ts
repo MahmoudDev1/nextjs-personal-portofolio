@@ -9,20 +9,28 @@ interface Project {
 
 export const projects: Project[] = [
   {
+    title: 'Marketplace Store',
+    image: '14.png',
+    description: 'Modastore is a dynamic e-commerce platform that connects users and merchants. Merchants have access to a dedicated dashboard to manage products, view orders, and more. Users can securely browse, order, and pay for products with a smooth and secure checkout process.',
+    link: 'https://modastore-marketplace.vercel.app/',
+    ar_title: 'سوق إلكتروني',
+    ar_description: 'منصة تجارة إلكترونية ديناميكية تربط بين المستخدمين والتجار. يتمتع التجار بلوحة تحكم مخصصة لإضافة المنتجات، عرض الطلبات، والمزيد. يمكن للمستخدمين تصفح المنتجات وطلبها بشكل آمن مع عملية دفع سلسة ومضمونة.'
+  },
+  {
     title: 'Website to book appointments with counselors',
     image: '10.png',
-    description: 'This website is made using laravel and vue.js in arabic for booking with professional consultants in all fields, with the possibility of paying in different ways.',
+    description: 'This website is for booking with professional consultants in all fields, with the possibility of paying in different ways.',
     link: 'https://estidam.sa/',
     ar_title: 'موقع لحجز مواعيد مع المستشارين',
-    ar_description: 'تم إنشاء هذا الموقع باستخدام Laravel و Vue.js باللغة العربية لحجز مواعيد مع المستشارين المحترفين في جميع المجالات، مع إمكانية الدفع بطرق مختلفة.'
+    ar_description: 'موقع مخصص لحجز مواعيد مع مستشارين محترفين في كل المجالات مع امكانية الدفع بطرق مختلفة'
   },
   {
     title: 'Website for booking co-working spaces',
     image: '9.png',
-    description: 'This website is made using laravel and vue.js in arabic for booking co-working spaces with payment methods like credit cards, apple pay and more.',
+    description: 'This website is for booking co-working spaces and more, it supports payment methods like credit cards and apple pay.',
     link: 'https://roznamah.sa/',
     ar_title: 'موقع لحجز مساحات العمل المشتركة',
-    ar_description: 'تم إنشاء هذا الموقع باستخدام Laravel و Vue.js باللغة العربية لحجز مساحات العمل المشتركة مع طرق الدفع مثل بطاقات الائتمان وApple Pay وغيرها.'
+    ar_description: 'هذا الموقع مخصص لحجز مساحات العمل المشتركة والمزيد، وهو يدعم طرق الدفع مثل بطاقات الائتمان وApple Pay.'
   },
   {
     title: 'Gift Cards',

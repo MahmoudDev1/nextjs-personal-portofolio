@@ -43,23 +43,6 @@ export default function ContactModal() {
   }, []);
 
   useEffect(() => {
-    if (modal) {
-      document.body.style.top = -document.documentElement.scrollTop + "px";
-      document.body.classList.add("hide-scrollbar");
-    } else {
-      const scrollY = document.body.style.top;
-      if (scrollY) {
-        document.body.classList.remove("hide-scrollbar");
-        document.body.style.top = "";
-        window.scrollTo({
-          behavior: "instant",
-          top: parseInt(scrollY || "0") * -1,
-        });
-      }
-    }
-  }, [modal]);
-
-  useEffect(() => {
     if (state?.success) {
       form.current?.reset();
     }
