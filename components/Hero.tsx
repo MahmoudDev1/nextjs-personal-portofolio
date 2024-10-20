@@ -72,7 +72,7 @@ export default function Hero() {
               <span>{t("button")}</span>
             </div>
           </Button>
-          <Button href="cv.pdf" download anchor>
+          <Button href="mahmoud-ahmed-cv.pdf" download anchor>
             <div className="flex gap-2 items-center">
               <RiFileUserFill fontSize={16} />
               <span>{t("button2")}</span>
