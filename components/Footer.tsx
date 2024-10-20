@@ -31,7 +31,7 @@ export default function Footer() {
           <a href="https://wa.me/+201020069196" target="_blank">
             <FaWhatsapp />
           </a>
-          <a href="https://github.com/ModaPro1/" target="_blank">
+          <a href="https://github.com/MahmoudDev1" target="_blank">
             <FaGithub />
           </a>
           <a href="https://www.linkedin.com/in/mahmoud-farghly-97668b261/" target="_blank">
