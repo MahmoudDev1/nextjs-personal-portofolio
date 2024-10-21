@@ -75,7 +75,10 @@ const config: Config = {
         },
       },
       colors: {
-        purple: "#cbacf9",
+        purple: {
+          DEFAULT: "#cbacf9",
+          "800": "#af83f2"
+        },
         black: {
           DEFAULT: "#000",
           "100": "#000319",

@@ -54,11 +54,11 @@ export default function Hero() {
         )}
         {locale == "en" ? (
           <h1 className="mt-3 dark:text-white text-black text-[40px] md:text-5xl lg:text-6xl leading-snug tracking-wide font-bold">
-            Transforming Concepts into Seamless <span className="text-purple">User Experiences</span>
+            Transforming Concepts into Seamless <span className="bg-gradient-to-r from-purple-800 to-purple text-transparent bg-clip-text">User Experiences</span>
           </h1>
         ) : (
           <h1 className="mt-3 dark:text-white text-black text-[40px] md:text-5xl lg:text-6xl leading-snug tracking-wide font-bold">
-            تحويل الأفكار إلى تجارب مستخدم <span className="text-purple">سلسة ومميزة</span>
+            تحويل الأفكار إلى تجارب مستخدم <span className="bg-gradient-to-r from-purple-800 to-purple text-transparent bg-clip-text">سلسة ومميزة</span>
           </h1>
         )}
         <TextGenerateEffect
@@ -66,13 +66,13 @@ export default function Hero() {
           className="mt-6 text-sm md:text-lg lg:text-xl tracking-widest rtl:tracking-normal"
         />
         <div className="mt-10 flex gap-2 justify-center flex-wrap">
-          <Button href="#projects" anchor classes="hidden sm:inline-flex">
+          <Button href="#projects" anchor classes="hidden sm:inline-flex sm:w-52">
             <div className="flex gap-2 items-center">
               <RiSendPlaneFill fontSize={16} />
               <span>{t("button")}</span>
             </div>
           </Button>
-          <Button href="mahmoud-ahmed-cv.pdf" download anchor>
+          <Button href="mahmoud-ahmed-cv.pdf" download anchor classes="sm:w-52">
             <div className="flex gap-2 items-center">
               <RiFileUserFill fontSize={16} />
               <span>{t("button2")}</span>

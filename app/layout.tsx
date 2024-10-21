@@ -23,7 +23,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
       <body className={`${locale == "en" ? inter.className : el_messiri.className} dark`}>
         <NextIntlClientProvider messages={messages}>
           <ContactModal />
-          <div className="mx-auto max-w-7xl px-5 sm:px-10" dir={locale == "en" ? "ltr" : "rtl"}>{children}</div>
+          <div dir={locale == "en" ? "ltr" : "rtl"}>{children}</div>
         </NextIntlClientProvider>
         <Analytics />
       </body>

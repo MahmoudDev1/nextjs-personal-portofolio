@@ -22,7 +22,7 @@ export default function EmailCopy() {
       <div className="group-hover/bento:translate-x-2 transition duration-200">
         <div className={`font-sans font-bold md:text-xl lg:text-3xl dark:text-neutral-200 mb-2 mt-2`}>
           <div>{t('box3.title')}</div>
-          <Button classes="mt-10 z-10" background="bg-[#161a31]" click={copyEmail}>
+          <Button classes="mt-10 z-10 w-52" background="bg-[#161a31]" click={copyEmail}>
             <IoCopyOutline className="me-2" /> {emailCopied ? t('box3.emailCopied') : t('box3.button')}
           </Button>
         </div>

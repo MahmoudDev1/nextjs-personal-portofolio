@@ -22,7 +22,7 @@ export default function Footer() {
         </h2>
       )}
       <p className="text-gray-400 text-xs sm:text-sm md:text-base ">{t('smallText')}</p>
-      <Button classes="mt-10" href="?openModal=true">
+      <Button classes="mt-10 sm:w-52" href="?openModal=true">
         {t('button')} <SiMinutemailer className="ms-2" fontSize={17} />
       </Button>
       <footer className="flex justify-between absolute bottom-0 py-6 w-full items-center flex-wrap gap-5">

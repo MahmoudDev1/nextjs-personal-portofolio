@@ -32,11 +32,11 @@ export default function Projects() {
   return (
     <div className="projects pt-20" id="projects">
       {locale == "en" ? (
-        <h2 className="text-center font-bold text-xl md:text-3xl lg:text-4xl">
+        <h2 className="text-center font-bold text-2xl md:text-3xl lg:text-4xl">
           My <span className="text-purple">Recent Projects</span>
         </h2>
       ) : (
-        <h2 className="text-center font-bold text-xl md:text-3xl lg:text-4xl">
+        <h2 className="text-center font-bold text-2xl md:text-3xl lg:text-4xl">
           أحدث <span className="text-purple">مشاريعي</span>
         </h2>
       )}
@@ -54,7 +54,9 @@ export default function Projects() {
             />
           );
         })}
-        <Button classes="w-fit mx-auto mt-2" click={clickHandler}>
+      </div>
+      <div className="text-center">
+      <Button classes="mt-8 w-fit" click={clickHandler}>
           <HiMiniFolderPlus fontSize={18} className="me-2" />
           {
             locale == "en" ? 
