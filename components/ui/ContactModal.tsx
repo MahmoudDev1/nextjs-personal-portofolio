@@ -5,21 +5,21 @@ import { AnimatePresence, motion } from "framer-motion";
 import { useRouter } from "next/navigation";
 import Button from "./Button";
 import { FaCheck, FaUser } from "react-icons/fa";
-import { FaEnvelope, FaMessage, FaX, FaXmark } from "react-icons/fa6";
+import { FaEnvelope, FaMessage, FaXmark } from "react-icons/fa6";
 import { useEffect, useRef } from "react";
 import { RiSendPlaneFill } from "react-icons/ri";
 import { sendMail } from "@/utils/mail";
 import { useFormState, useFormStatus } from "react-dom";
-import Spinner from "./Spinner";
 import ReactConfetti from "react-confetti";
 import { useLocale, useTranslations } from "next-intl";
+import { CgSpinnerAlt } from "react-icons/cg";
 
 function FormButton() {
   const t = useTranslations("Modal");
   const { pending } = useFormStatus();
   return (
     <Button classes="w-fit" disabled={pending}>
-      {pending ? <Spinner /> : <RiSendPlaneFill fontSize={18} className="me-2" />}
+      {pending ? <CgSpinnerAlt fontSize={18} className="me-2 animate-spin" /> : <RiSendPlaneFill fontSize={18} className="me-2" />}
       {t("button")}
     </Button>
   );
