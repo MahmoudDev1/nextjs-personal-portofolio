@@ -58,7 +58,7 @@ export default function Hero() {
           </h1>
         ) : (
           <h1 className="mt-3 dark:text-white text-black text-[40px] md:text-5xl lg:text-6xl leading-snug tracking-wide font-bold">
-            تحويل الأفكار إلى تجارب مستخدم <span className="bg-gradient-to-r from-purple-800 to-purple text-transparent bg-clip-text">سلسة ومميزة</span>
+            تحويل الأفكار إلى تجارب مستخدم <span className="bg-gradient-to-r from-purple-800 to-purple text-transparent bg-clip-text tracking-normal">سلسة ومميزة</span>
           </h1>
         )}
         <TextGenerateEffect
